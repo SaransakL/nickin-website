@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nickin Game Studios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/nickin/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="assets/nickin/NickinTextLogo_White.png" class="logo"></a>
+    </header>
+
+    <section id="slideshow">
+        <div class="slide active" style="background-image:url('assets/slideshows/queensirikit.png');"></div>
+    </section>
+
+    <section id="games">
+        <div class="title">Featured Games</div>
+
+        <div class="works-grid">
+            <p>Not found.</p>
+        </div>
+    </section>
+
+    <section id="partners">
+        <div class="title">Our Partners</div>
+
+        <div class="partners-grid">
+            <a href="https://www.sriwisa.com" target="_blank" class="partner-card" title="Sriwisa Studio">
+                <img src="assets/partners/sriwisastudio.png">
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="social-link">
+            <a href="https://www.facebook.com/NickinNGS" class="fa-brands fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/nickin_ngs/" class="fa-brands fa-instagram" target="_blank"></a>
+            <a href="https://www.tiktok.com/@nickin_ngs" class="fa-brands fa-tiktok" target="_blank"></a>
+            <a href="" class="fa-brands fa-discord" target="_blank"></a>
+        </div>
+
+        <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Nickin Game Studios</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('#slideshow .slide');
+        let index = 0;
+
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }, 4000);
+    </script>
+</body>
+</html>
