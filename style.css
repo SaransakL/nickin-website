@@ -16,12 +16,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 
@@ -50,7 +44,6 @@ section .title {
 }
 
 #slideshow {
-    margin-top: 8vh;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -99,28 +92,37 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }
 
+#about p {
+    margin-top: 20px;
+    width: 70%;
+}
+
 .works-grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
 .work-card {
     background: #f8f8f8;
     width: 400px;
-    height: 200px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
 }
 
 .work-card img {
-    width: 70%;
+    width: 80%;
 }
 
-.work-card img:hover {
-    width: 80%;
+.work-card:hover img {
+    width: 90%;
 }
 
 a {
@@ -132,17 +134,19 @@ a {
 .partners-grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
 .partner-card {
     background-color: #f8f8f8;
     width: 400px;
-    height: 200px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 16px;
 }
 
 .partner-card img {
@@ -150,11 +154,76 @@ a {
     object-fit: contain;
 }
 
-.partner-card img:hover {
+.partner-card:hover img {
     max-width: 80%;
 }
 
 .social-link a {
     padding: 0 10px 10px;
     font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    section .title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #slideshow {
+        height: 30vh;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 20px;
+    }
+
+    #hero .logo {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        width: 100%;
+    }
+
+    .works-grid,
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .work-card,
+    .partner-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .work-card img,
+    .partner-card img {
+        max-width: 80%;
+    }
+
 }
