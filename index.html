@@ -14,8 +14,15 @@
     </header>
 
     <section id="slideshow">
-        <div class="slide active" style="background-image:url('assets/slideshows/nickin.png');"></div>
-        <div class="slide" style="background-image:url('assets/slideshows/pp-soon.png');"></div>
+        <div class="slide active" style="background-image:url('assets/slideshows/pp-soon.png');"></div>
+        <div class="slide" style="background-image:url('assets/slideshows/queensirikit.png');"></div>
+
+        <button class="slide-btn prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slide-btn next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </section>
 
     <section id="about">
@@ -46,15 +53,6 @@
         <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Nickin Game Studios</p>
     </footer>
 
-    <script>
-        const slides = document.querySelectorAll('#slideshow .slide');
-        let index = 0;
-
-        setInterval(() => {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-        }, 5000);
-    </script>
+    <script src="slideshow.js"></script>
 </body>
 </html>
